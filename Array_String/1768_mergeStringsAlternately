@@ -1,0 +1,25 @@
+var mergeAlternately = function (word1, word2) {
+  if (!word1) return word2;
+  if (!word2) return word1;
+
+  let length = Math.min(word1.length, word2.length);
+  let str = [];
+
+  for (let i = 0; i < length; i++) {
+    str.push(word1[i]);
+    str.push(word2[i]);
+  }
+
+  if (word1.length > length) {
+    for (let i = length; i < word1.length; i++) {
+      str.push(word1[i]);
+    }
+  }
+  if (word2.length > length) {
+    for (let i = length; i < word2.length; i++) {
+      str.push(word2[i]);
+    }
+  }
+
+  return str.join("");
+};
