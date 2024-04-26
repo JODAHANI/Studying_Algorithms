@@ -1,3 +1,4 @@
+let nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
 var mergeAlternately = function (word1, word2) {
   if (!word1) return word2;
   if (!word2) return word1;
